@@ -1,0 +1,75 @@
+.text {
+  width: 45ch;
+  height: 60%;
+}
+.box2{
+  padding-top: 6rem!important;
+}
+
+.profile {
+  border-radius: 50%;
+  width: 230px;
+  height: 250px;
+  margin-top: 60px;
+  box-sizing: border-box;
+  overflow: hidden;
+  transform: translatey(0);
+  animation: top-to-bot 3s ease-in-out infinite;
+}
+
+@keyframes top-to-bot {
+  0% {
+    box-shadow: 0 5px 15px 0 #8c8c8c;
+    transform: translatey(0);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0 #f2f2f2;
+    transform: translatey(-20px);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0 #8c8c8c;
+    transform: translatey(0);
+  }
+}
+
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+
+.role {
+  font-family: "Helvetica Neue";
+  font-weight: normal;
+}
+
+#tsparticles {
+  height: 40%;
+  width: 80%!important;
+  padding-left: 0;
+  margin-right: 0 !important;
+  position: absolute;
+}
+
+button {
+  margin-left: 1.5rem !important;
+  border-radius: 0.25rem !important;
+  background-color: white !important;
+  border-color: #669db3 !important;
+  color: #669db3 !important;
+  border-style: groove !important;
+  border-width: 1.5px !important;
+}
+
+button:hover {
+  background-color: #669db3 !important;
+  color: white !important;
+}
+
+i {
+  font-size: 24px !important;
+  padding: 0.5rem !important;
+}
+
+.group-btn {
+  margin-top: 2.5rem;
+}
