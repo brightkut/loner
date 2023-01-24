@@ -2,6 +2,7 @@ import './App.scss';
 import NavBar from "./components/NavBar";
 import Profile from "./components/Profile";
 import About from "./components/About";
+import Skill from "./components/Skill";
 
 function App() {
     return (
@@ -12,6 +13,9 @@ function App() {
             </div>
             <div className="container-fluid about-main">
                 <About/>
+            </div>
+            <div className="container-fluid">
+                <Skill/>
             </div>
         </>
     );
