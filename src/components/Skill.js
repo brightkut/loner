@@ -36,6 +36,7 @@ function Skill() {
                 baseURL: "https://api.github.com"
             })
 
+            const token = "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"
             const getStar = await api.get("/users/brightkut/starred", GET_AUTHORIZE_HEADER_WITH_TOKEN(token))
             const getCommits = await api.get("/search/commits?q=author:brightkut", GET_AUTHORIZE_HEADER_WITH_TOKEN(token));
             const getRepo = await api.get("/search/repositories?q=user:brightkut", GET_AUTHORIZE_HEADER_WITH_TOKEN(token));
@@ -54,7 +55,7 @@ function Skill() {
 
     return (
         <>
-            <div className="container">
+            <div className="container" id="skills">
                 <div className="skill-div">
                     <span className="skill-header">Skills</span>
                     <hr className="line-skill"/>
@@ -116,84 +117,92 @@ function Skill() {
                     <div className="github-boxl col-sm-12 col-md-5 col-lg-5">
                         <div>
                             <p className="repo">Stats</p>
-                            <div className="row">
-                                <div className="col-sm-8 col-md-8 col-lg-8">
-                                    <div className="row">
-                                        <div className="ic-cont col-sm-4 col-md-4 col-lg-4">
-                                            <FontAwesomeIcon icon={faStar}/>
+                            <div className="container">
+                                <div className="row">
+                                    <div className="col-sm-8 col-md-8 col-lg-8">
+                                        <div className="row">
+                                            <div className="ic-cont col-4 col-sm-4 col-md-4 col-lg-4">
+                                                <FontAwesomeIcon icon={faStar}/>
+                                            </div>
+                                            <div className="col-8 col-sm-8 col-md-8 col-lg-8">
+                                                <p> Total Star: {totalStar}</p>
+                                            </div>
                                         </div>
-                                        <div className="col-sm-8 col-md-8 col-lg-8">
-                                            <p> Total Star: {totalStar}</p>
+
+                                        <div className="row">
+                                            <div className="ic-cont col-4 col-sm-4 col-md-4 col-lg-4">
+                                                <i className="ic fa-solid fa-code-commit"></i>
+                                            </div>
+                                            <div className="col-8 col-sm-8 col-md-8 col-lg-8">
+                                                <p>Total Commits: {totalCommit}</p>
+                                            </div>
+                                        </div>
+                                        <div className="row">
+                                            <div className="ic-cont col-4 col-sm-4 col-md-4 col-lg-4">
+                                                <i className="ic fa-solid fa-book-bookmark"></i>
+                                            </div>
+                                            <div className="col-8 col-sm-8 col-md-8 col-lg-8">
+                                                <p>Total Repos: {totalRepo}</p>
+                                            </div>
+                                        </div>
+                                        <div className="row">
+                                            <div className="ic-cont col-4 col-sm-4 col-md-4 col-lg-4">
+                                                <i className="ic fa-solid fa-people-group"></i>
+                                            </div>
+                                            <div className="col-8 col-sm-8 col-md-8 col-lg-8">
+                                                <p>Follower: {totalFollower}</p>
+                                            </div>
+                                        </div>
+                                        <div className="row">
+                                            <div className="ic-cont col-4 col-sm-4 col-md-4 col-lg-4">
+                                                <i className="ic fa-solid fa-user-plus"></i>
+                                            </div>
+                                            <div className="col-8 col-sm-8 col-md-8 col-lg-8">
+                                                <p>Following: {totalFollowing}</p>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div className="row">
-                                        <div className="ic-cont col-sm-4 col-md-4 col-lg-4">
-                                            <i className="ic fa-solid fa-code-commit"></i>
-                                        </div>
-                                        <div className="col-sm-8 col-md-8 col-lg-8">
-                                            <p>Total Commits: {totalCommit}</p>
-                                        </div>
+                                    <div className="github-cont col-4 col-sm-4 col-md-4 col-lg-4">
+                                        <i className="fa font-github fa-github"></i>
                                     </div>
-                                    <div className="row">
-                                        <div className="ic-cont col-sm-4 col-md-4 col-lg-4">
-                                            <i className="ic fa-solid fa-book-bookmark"></i>
-                                        </div>
-                                        <div className="col-sm-8 col-md-8 col-lg-8">
-                                            <p>Total Repos: {totalRepo}</p>
-                                        </div>
-                                    </div>
-                                    <div className="row">
-                                        <div className="ic-cont col-sm-4 col-md-4 col-lg-4">
-                                            <i className="ic fa-solid fa-people-group"></i>
-                                        </div>
-                                        <div className="col-sm-8 col-md-8 col-lg-8">
-                                            <p>Follower: {totalFollower}</p>
-                                        </div>
-                                    </div>
-                                    <div className="row">
-                                        <div className="ic-cont col-sm-4 col-md-4 col-lg-4">
-                                            <i className="ic fa-solid fa-user-plus"></i>
-                                        </div>
-                                        <div className="col-sm-8 col-md-8 col-lg-8">
-                                            <p>Following: {totalFollowing}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="github-cont col-sm-4 col-md-4 col-lg-4">
-                                    <i className="fa font-github fa-github"></i>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div className="github-boxr col-sm-12 col-md-5 col-lg-5">
-                        <div>
-                            <p className="repo">Top Languages By Commit</p>
-                            <div className="git-pie">
-                                <Chart type="donut"
-                                       series={[12.76, 25.53, 36.17, 4.25, 2.12, 2.12, 2.12,]}
-                                       options={{
-                                           labels: ['Html', 'Javascript', 'Java', 'Typescript', 'Kotlin', 'Python', 'C#'],
-                                           title: {
-                                               text: "Programming Language"
-                                           },
-                                           plotOptions: {
-                                               pie: {
-                                                   donut: {
-                                                       labels: {
-                                                           total: {
-                                                               show: true,
-                                                               fontSize: 30,
-                                                               color: '#f90000'
+                        <div className="container">
+                            <div className="row">
+                                <div className="col-12 col-sm-12 col-md-12 col-lg-12">
+                                    <p className="repo">Top Languages By Commit</p>
+                                    <Chart type="donut"
+                                           series={[12.76, 25.53, 36.17, 4.25, 2.12, 2.12, 2.12,]}
+                                           width={350}
+                                           height={200}
+                                           options={{
+                                               labels: ['Html', 'Javascript', 'Java', 'Typescript', 'Kotlin', 'Python', 'C#'],
+                                               title: {
+                                                   text: "Programming Language"
+                                               },
+                                               plotOptions: {
+                                                   pie: {
+                                                       donut: {
+                                                           size: "50%",
+                                                           labels: {
+                                                               total: {
+                                                                   show: true,
+                                                                   fontSize: 30,
+                                                                   color: '#f90000'
+                                                               }
                                                            }
                                                        }
                                                    }
+                                               },
+                                               dataLabels: {
+                                                   enabled: true
                                                }
-                                           },
-                                           dataLabels: {
-                                               enabled: true
-                                           }
-                                       }}
-                                />
+                                           }}
+                                    />
+                                </div>
                             </div>
                         </div>
                     </div>

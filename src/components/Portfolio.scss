@@ -1,0 +1,34 @@
+.port-div {
+  padding-top: 2rem;
+  text-align: center;
+}
+
+.port-header {
+  font-size: 30px;
+  font-weight: 350;
+  color: #535a5e;
+  font-family: Helvetica Neue;
+}
+
+.line-port {
+  width: 50%;
+  margin: 2rem auto;
+}
+
+#main-port {
+  background-color: #f1f1f1;
+}
+
+.card {
+  border: 2px solid gray !important;
+}
+
+.card-img {
+  border: 1px solid gray;
+  border-radius: unset !important;
+}
+
+.card-body {
+  background-color: #ffff;
+  border: 1px solid gray;
+}

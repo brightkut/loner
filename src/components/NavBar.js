@@ -25,14 +25,14 @@ function NavBar() {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav ml-auto">
                         <li className="nav-item mx-3">
-                            <a className="nav-link " href="#"><FontAwesomeIcon icon={faUser}/> about</a>
+                            <a className="nav-link " href="#main-about"><FontAwesomeIcon icon={faUser}/> about</a>
                         </li>
                         <li className="nav-item mx-3">
-                            <a className="nav-link" href="#"><FontAwesomeIcon
+                            <a className="nav-link" href="#skills"><FontAwesomeIcon
                                 icon={faChartLine}/> skills</a>
                         </li>
                         <li className="nav-item mx-3">
-                            <a className="nav-link" href="#"><FontAwesomeIcon icon={faCode}/> portfolio</a>
+                            <a className="nav-link" href="#main-port"><FontAwesomeIcon icon={faCode}/> portfolio</a>
                         </li>
                         <li className="nav-item mx-3">
                             <a className="nav-link" href="#"><FontAwesomeIcon icon={faAddressBook}/> contact</a>
