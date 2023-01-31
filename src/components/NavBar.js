@@ -3,7 +3,6 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faAddressBook, faChartLine, faCode, faMoon, faSun, faUser} from "@fortawesome/fontawesome-free-solid";
 import {useDispatch, useSelector} from "react-redux";
 import {NIGHT_ACTION} from "../actions/types";
-import {useEffect} from "react";
 
 function NavBar() {
     const isNight = useSelector(state => state.night)

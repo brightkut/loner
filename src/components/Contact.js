@@ -1,10 +1,12 @@
 import "./Contact.scss"
 import React, {useState} from "react";
+import {useSelector} from "react-redux";
 
 function Contact() {
     const [name, setName] = useState("name")
     const [email, setEmail] = useState("email")
     const [message, setMessage] = useState("message")
+    const isNight = useSelector(state => state.night)
 
     function onChangeName(event) {
         setName(event.target.value)
@@ -24,14 +26,34 @@ function Contact() {
         setMessage("")
     }
 
+    const styleMorning = {
+        backgroundColor: "white",
+        paddingBottom: "2 rem"
+    }
+    const styleNight = {
+        backgroundColor: "#343a40",
+        paddingBottom: "2 rem"
+    }
+
+    const fontHeadMorning = {
+        color: "#535A5E"
+    }
+    const fontHeadNight = {
+        color: "#D3D2D2"
+    }
+
+    const btnNight = "btn btn-outline-light btn-send"
+    const btnMorning = "btn btn-outline-secondary btn-send"
+
     return (
-        <section id="contact" className="pt-5">
+        <section id="contact" className="pt-5 pb-5" style={isNight ? styleNight : styleMorning}>
             <div className="container text-center">
-                <h3 className="contact-header">Contact</h3>
-                <p style={{fontSize: "16px", fontFamily: "Segoe UI Emoji"}}>I always looking forward to share about
+                <h3 className="contact-header" style={isNight ? fontHeadNight : fontHeadMorning}>Contact</h3>
+                <p style={{fontSize: "16px", fontFamily: "Segoe UI Emoji"}}
+                   style={isNight ? fontHeadNight : fontHeadMorning}>I always looking forward to share about
                     programing with you guy and open
                     for good new opportunity!</p>
-                <hr className="line-port"/>
+                <hr className="line-port" style={isNight ? fontHeadNight : fontHeadMorning}/>
                 <div className="container pt-5">
                     <div className="input-group mb-4" style={{width: "50%", margin: "auto"}}>
                         < input type="text" className="form-control" placeholder="name" aria-label="name" value={name}
@@ -49,7 +71,7 @@ function Contact() {
                     </div>
 
                     <div className="input-group mb-5" style={{width: "50%", margin: "auto"}}>
-                        <button type="button" className="btn btn-outline-secondary btn-send"
+                        <button type="button" className={isNight ? btnNight : btnMorning}
                                 style={{width: "100%"}} onClick={sendMail}>Send
                         </button>
                     </div>

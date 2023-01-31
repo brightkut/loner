@@ -1,12 +1,40 @@
 import './Profile.scss'
 import {loadSnowPreset} from "tsparticles-preset-snow";
 import Particles from "react-particles"
+import {useSelector} from "react-redux";
+import {useState} from "react";
 
 function Profile() {
+
+    const isNight = useSelector(state => state.night)
+    const [hover, setHover] = useState(false);
 
     // this customizes the component tsParticles installation
     const customInit = async (engine) => {
         await loadSnowPreset(engine);
+    }
+
+    const fontMorning = {
+        color: "black"
+    }
+    const fontNight = {
+        color: "white"
+    }
+
+    const getStyleBtn = (isNight, hover) => {
+        if (isNight === false && hover === false) {
+            return {
+                backgroundColor: "white",
+                borderColor: "#669db3",
+                color: "#669db3",
+            }
+        } else if (isNight === true && hover === false) {
+            return {
+                backgroundColor: "#669db3",
+                borderColor: "#669db3",
+                color: "white",
+            }
+        }
     }
 
     const options = {
@@ -121,8 +149,15 @@ function Profile() {
         },
     };
 
+    const styleMorning = {
+        backgroundColor: "white",
+    }
+    const styleNight = {
+        backgroundColor: "#343a40",
+    }
+
     return (
-        <div className="container-fluid">
+        <div className="container-fluid pb-5" style={isNight ? styleNight : styleMorning}>
             <div className="container">
 
                 <div className="row">
@@ -130,12 +165,13 @@ function Profile() {
                         <img className="profile" src="/profile.jpg"/>
                         <br/>
                         <br/>
-                        <h4 className="role">Software Developer</h4>
+                        <h4 className="role" style={isNight ? fontNight : fontMorning}>Software Developer</h4>
                     </div>
-                    <div  className="box2 col-sm-12 col-md-12 col-lg-6 justify-content-center">
+                    <div className="box2 col-sm-12 col-md-12 col-lg-6 justify-content-center">
                         <div className="text">
                             <Particles options={options} init={customInit}/>
-                            <div className="container-fluid" id="text-box-profile">
+                            <div className="container-fluid" id="text-box-profile"
+                                 style={isNight ? fontNight : fontMorning}>
                                 <h4>Who am I ?</h4>
                                 <p>I'm a teeny Backend Developer who want to learn new thing with 25 years old. For my
                                     free time
@@ -147,10 +183,16 @@ function Profile() {
                                     not believe in word
                                     "Genius" but I believe with "Try hard".</p>
                                 <div className="group-btn">
-                                    <button><i className="fa fa-github"></i></button>
-                                    <button><i className="fa fa-linkedin-square"></i></button>
-                                    <button><i className="fa fa-steam"></i></button>
-                                    <button><i className="fa fa-instagram"></i></button>
+                                    <a style={getStyleBtn(isNight, hover)} className="btn a-btn"
+                                       href="https://github.com/brightkut"><i className="fa fa-github"></i></a>
+                                    <a style={getStyleBtn(isNight, hover)} className="btn a-btn"
+                                       href="https://www.linkedin.com/in/disorn-thitikornkovit-565526186/"><i
+                                        className="fa fa-linkedin-square"></i></a>
+                                    <a style={getStyleBtn(isNight, hover)} className="btn a-btn"
+                                       href="https://steamcommunity.com/id/brightkuq/"><i
+                                        className="fa fa-steam"></i></a>
+                                    <a style={getStyleBtn(isNight, hover)} className="btn a-btn"
+                                       href="https://www.instagram.com/brighteloy/"><i className="fa fa-instagram"></i></a>
                                 </div>
                             </div>
                         </div>

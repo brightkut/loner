@@ -2,8 +2,9 @@
   width: 45ch;
   height: 60%;
 }
-.box2{
-  padding-top: 6rem!important;
+
+.box2 {
+  padding-top: 6rem !important;
 }
 
 .profile {
@@ -44,7 +45,7 @@ img {
 
 #tsparticles {
   height: 40%;
-  width: 80%!important;
+  width: 80% !important;
   padding-left: 0;
   margin-right: 0 !important;
   position: absolute;
@@ -53,16 +54,23 @@ img {
 button {
   margin-left: 1.5rem !important;
   border-radius: 0.25rem !important;
-  background-color: white !important;
-  border-color: #669db3 !important;
-  color: #669db3 !important;
   border-style: groove !important;
   border-width: 1.5px !important;
 }
 
+.a-btn {
+  margin-left: 1.5rem !important;
+  border-radius: 0.25rem !important;
+  border-style: groove !important;
+  border-width: 1.5px !important;
+}
+
+.a-btn:hover{
+  background-color: grey !important;
+}
+
 button:hover {
-  background-color: #669db3 !important;
-  color: white !important;
+  background-color: grey !important;
 }
 
 i {

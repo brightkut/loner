@@ -1,15 +1,34 @@
 import './Portfolio.scss'
 import React from "react";
+import {useSelector} from "react-redux";
 
 function Portfolio() {
+    const isNight = useSelector(state => state.night)
 
+    const styleMorning = {
+        backgroundColor: "#f8f9fa",
+    }
+    const styleNight = {
+        backgroundColor: "#262C30",
+    }
+
+    const fontHeadMorning = {
+        color: "#535A5E"
+    }
+    const fontHeadNight = {
+        color: "#D3D2D2"
+    }
     return (
-        <div className="container-fluid" id="main-port">
+        <div className="container-fluid" id="main-port" style={isNight ? styleNight : styleMorning}>
             <div className="container">
                 <div className="port-div">
-                    <span className="port-header">Portfolio</span>
-                    <hr className="line-port"/>
-                    <p style={{fontSize: "20px", fontFamily: "BlinkMacSystemFont"}}>My Blog / Website</p>
+                    <span className="port-header" style={isNight ? fontHeadNight : fontHeadMorning}>Portfolio</span>
+                    <hr className="line-port" style={isNight ? fontHeadNight : fontHeadMorning}/>
+                    <p style={{
+                        fontSize: "20px",
+                        fontFamily: "BlinkMacSystemFont",
+                        color: isNight ? "#D3D2D2" : "#535A5E"
+                    }}>My Blog / Website</p>
 
                     <div className="row py-5">
                         <div className="col-12 col-sm-12 col-md-6 col-lg-4 mb-4">
