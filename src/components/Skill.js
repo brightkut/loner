@@ -79,7 +79,7 @@ function Skill() {
     }
 
     return (
-        <div className="container-fluid" style={isNight ? styleNight : styleMorning}>
+        <div className="container-fluid pb-5" style={isNight ? styleNight : styleMorning}>
             <div className="container" id="skills" style={isNight ? styleNight : styleMorning}>
                 <div className="skill-div">
                     <span className="skill-header" style={isNight ? fontHeadNight : fontHeadMorning}>Skills</span>
