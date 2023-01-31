@@ -7,7 +7,7 @@ import {useState} from "react";
 function Profile() {
 
     const isNight = useSelector(state => state.night)
-    const [hover, setHover] = useState(false);
+    const [hover] = useState(false);
 
     // this customizes the component tsParticles installation
     const customInit = async (engine) => {

@@ -49,8 +49,8 @@ function Contact() {
         <section id="contact" className="pt-5 pb-5" style={isNight ? styleNight : styleMorning}>
             <div className="container text-center">
                 <h3 className="contact-header" style={isNight ? fontHeadNight : fontHeadMorning}>Contact</h3>
-                <p style={{fontSize: "16px", fontFamily: "Segoe UI Emoji"}}
-                   style={isNight ? fontHeadNight : fontHeadMorning}>I always looking forward to share about
+                <p style={{fontSize: "16px", fontFamily: "Segoe UI Emoji", color: isNight ? "#D3D2D2" : "#535A5E"}}>I
+                    always looking forward to share about
                     programing with you guy and open
                     for good new opportunity!</p>
                 <hr className="line-port" style={isNight ? fontHeadNight : fontHeadMorning}/>
