@@ -33,7 +33,7 @@ function Portfolio() {
                     <div className="row py-5">
                         <div className="col-12 col-sm-12 col-md-6 col-lg-4 mb-4">
                             <div className="card h-100">
-                                <img src="/website.png" className="card-img-top card-img" alt="..."/>
+                                <img src="https://i.ibb.co/m6zSCdK/website.png" className="card-img-top card-img" alt="..."/>
                                 <div className="card-body">
                                     <h5 className="card-title">Website</h5>
                                     <p className="card-text">This is my website to summarize what I'm learning about
@@ -45,7 +45,7 @@ function Portfolio() {
                         </div>
                         <div className="col-12 col-sm-12 col-md-6 col-lg-4 mb-4">
                             <div className="card h-100">
-                                <img src="/gamer.png" className="card-img-top card-img" alt="..."/>
+                                <img src="https://i.ibb.co/DtpdC5P/gamer.png" className="card-img-top card-img" alt="..."/>
                                 <div className="card-body">
                                     <h5 className="card-title">Blog</h5>
                                     <p className="card-text">Gamer to Coder เด็กติดเกมสู่เด็กติดโค้ด</p>
@@ -57,7 +57,7 @@ function Portfolio() {
                         </div>
                         <div className="col-12 col-sm-12 col-md-6 col-lg-4 mb-4">
                             <div className="card h-100">
-                                <img src="/docker.png" className="card-img-top card-img" alt="..."/>
+                                <img src="https://i.ibb.co/kxZf94x/docker.png" className="card-img-top card-img" alt="..."/>
                                 <div className="card-body">
                                     <h5 className="card-title">Blog</h5>
                                     <p className="card-text">Docker #1 วาฬน้อยแสนหรรษา</p>
@@ -69,7 +69,7 @@ function Portfolio() {
                         </div>
                         <div className="col-12 col-sm-12 col-md-6 col-lg-4 mb-4">
                             <div className="card h-100">
-                                <img src="/docker2.png" className="card-img-top card-img" alt="..."/>
+                                <img src="https://i.ibb.co/9ntKg8y/docker2.png" className="card-img-top card-img" alt="..."/>
                                 <div className="card-body">
                                     <h5 className="card-title">Blog</h5>
                                     <p className="card-text">มาใช้ Docker กันเถอะ #2</p>
@@ -81,7 +81,7 @@ function Portfolio() {
                         </div>
                         <div className="col-12 col-sm-12 col-md-6 col-lg-4 mb-4">
                             <div className="card h-100">
-                                <img src="/ioc.png" className="card-img-top card-img" alt="..."/>
+                                <img src="https://i.ibb.co/Dw95tph/ioc.png" className="card-img-top card-img" alt="..."/>
                                 <div className="card-body">
                                     <h5 className="card-title">Blog</h5>
                                     <p className="card-text">Dependency Injection (DI) และ Inversion of Control
