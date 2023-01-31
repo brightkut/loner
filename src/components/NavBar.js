@@ -35,7 +35,7 @@ function NavBar() {
                             <a className="nav-link" href="#main-port"><FontAwesomeIcon icon={faCode}/> portfolio</a>
                         </li>
                         <li className="nav-item mx-3">
-                            <a className="nav-link" href="#"><FontAwesomeIcon icon={faAddressBook}/> contact</a>
+                            <a className="nav-link" href="#contact"><FontAwesomeIcon icon={faAddressBook}/> contact</a>
                         </li>
                         <li className="nav-item mx-3">
                             <a className="nav-link" href="#" onClick={changeNightMode}><FontAwesomeIcon

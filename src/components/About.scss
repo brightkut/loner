@@ -1,5 +1,5 @@
 #main-about {
-  background-color: #f1f1f1;
+  background-color: rgb(248, 249, 250) !important;
 }
 
 #pronoun {
@@ -23,7 +23,7 @@
 }
 
 .row-about {
-  margin-top: 3rem!important;
+  margin-top: 3rem !important;
 }
 
 .topic-about {
@@ -64,10 +64,10 @@
 .con-box {
   border-left: 3px solid #6c757d;
   margin-bottom: 1rem;
-  padding-left: 2rem!important;
-  padding-right: 2rem!important;
-  margin-left: 2rem!important;
-  margin-right: 2rem!important;
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+  margin-left: 2rem !important;
+  margin-right: 2rem !important;
 }
 
 .con-box:before {
@@ -79,7 +79,7 @@
   border: 3px solid #6c757d;
   background-color: white;
   position: absolute;
-  left:30px;
+  left: 30px;
 }
 
 .tag {
