@@ -38,7 +38,7 @@ function Skill() {
                 baseURL: "https://api.github.com"
             })
 
-            const token = "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"
+            const token = process.env.ACCESS_TOKEN
             const getStar = await api.get("/users/brightkut/starred", GET_AUTHORIZE_HEADER_WITH_TOKEN(token))
             const getCommits = await api.get("/search/commits?q=author:brightkut", GET_AUTHORIZE_HEADER_WITH_TOKEN(token));
             const getRepo = await api.get("/search/repositories?q=user:brightkut", GET_AUTHORIZE_HEADER_WITH_TOKEN(token));

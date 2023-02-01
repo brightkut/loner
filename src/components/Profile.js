@@ -162,7 +162,8 @@ function Profile() {
 
                 <div className="row">
                     <div className="col-sm-12 col-md-12 col-lg-6 text-center">
-                        <img className="profile" src="https://i.ibb.co/H7cnW0Q/profile.jpg"/>
+                        <img className="profile" src="https://i.ibb.co/H7cnW0Q/profile.jpg"
+                             style={{objectFit: "cover"}}/>
                         <br/>
                         <br/>
                         <h4 className="role" style={isNight ? fontNight : fontMorning}>Software Developer</h4>
