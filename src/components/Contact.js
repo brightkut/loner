@@ -1,4 +1,4 @@
-import "./Contact.scss"
+import "../styles/Contact.scss"
 import React, {useState} from "react";
 import {useSelector} from "react-redux";
 

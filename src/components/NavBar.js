@@ -1,4 +1,4 @@
-import './NavBar.scss';
+import '../styles/NavBar.scss';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faAddressBook, faChartLine, faCode, faMoon, faSun, faUser} from "@fortawesome/fontawesome-free-solid";
 import {useDispatch, useSelector} from "react-redux";
@@ -13,6 +13,7 @@ function NavBar() {
             type: NIGHT_ACTION,
         })
     }
+
 
     const styleMorning = {
         backgroundColor: "#f8f9fa",

@@ -1,4 +1,4 @@
-import './Profile.scss'
+import '../styles/Profile.scss'
 import {loadSnowPreset} from "tsparticles-preset-snow";
 import Particles from "react-particles"
 import {useSelector} from "react-redux";

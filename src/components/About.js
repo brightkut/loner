@@ -1,4 +1,4 @@
-import "./About.scss"
+import "../styles/About.scss"
 import {useSelector} from "react-redux";
 
 function About() {
