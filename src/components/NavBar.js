@@ -3,10 +3,12 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faAddressBook, faChartLine, faCode, faMoon, faSun, faUser} from "@fortawesome/fontawesome-free-solid";
 import {useDispatch, useSelector} from "react-redux";
 import {NIGHT_ACTION} from "../actions/types";
+import {styleDarkMode} from "../styles/darkmode/DarkMode";
 
 function NavBar() {
     const isNight = useSelector(state => state.night)
     const dispatch = useDispatch()
+    const theme = styleDarkMode(isNight)
 
     function changeNightMode() {
         dispatch({
@@ -14,25 +16,10 @@ function NavBar() {
         })
     }
 
-
-    const styleMorning = {
-        backgroundColor: "#f8f9fa",
-    }
-    const styleNight = {
-        backgroundColor: "#262C30",
-    }
-
-    const fontMorning = {
-        color: "#535A5E"
-    }
-    const fontNight = {
-        color: "#D3D2D2"
-    }
-
     return (
         <nav className="navbar navbar-expand-lg  border-bottom border-grey border-1"
-             style={isNight ? styleNight : styleMorning}>
-            <a className="navbar-brand ml-5 me-0 pl-5" style={isNight ? fontNight : fontMorning} href="#">LonEr.</a>
+             style={theme.navbarBackgroundColor}>
+            <a className="navbar-brand ml-5 me-0 pl-5" style={theme.navbarFontcolor} href="#">LonEr.</a>
             <button className="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false"
@@ -44,25 +31,25 @@ function NavBar() {
                 <ul className="navbar-nav ml-auto">
                     <li className="nav-item mx-3">
                         <a className="nav-link " href="#main-about"
-                           style={isNight ? fontNight : fontMorning}><FontAwesomeIcon icon={faUser}/> about</a>
+                           style={theme.navbarFontcolor}><FontAwesomeIcon icon={faUser}/> about</a>
                     </li>
                     <li className="nav-item mx-3">
                         <a className="nav-link" href="#skills"
-                           style={isNight ? fontNight : fontMorning}><FontAwesomeIcon
+                           style={theme.navbarFontcolor}><FontAwesomeIcon
                             icon={faChartLine}/> skills</a>
                     </li>
                     <li className="nav-item mx-3">
                         <a className="nav-link" href="#main-port"
-                           style={isNight ? fontNight : fontMorning}><FontAwesomeIcon icon={faCode}/> portfolio</a>
+                           style={theme.navbarFontcolor}><FontAwesomeIcon icon={faCode}/> portfolio</a>
                     </li>
                     <li className="nav-item mx-3">
                         <a className="nav-link" href="#contact"
-                           style={isNight ? fontNight : fontMorning}><FontAwesomeIcon icon={faAddressBook}/> contact</a>
+                           style={theme.navbarFontcolor}><FontAwesomeIcon icon={faAddressBook}/> contact</a>
                     </li>
                     <li className="nav-item mx-3">
                         <a className="nav-link" href="#" onClick={changeNightMode}
-                           style={isNight ? fontNight : fontMorning}><FontAwesomeIcon
-                            icon={isNight ? faMoon : faSun}/></a>
+                           style={theme.navbarFontcolor}><FontAwesomeIcon
+                            icon={theme.navbarIcon}/></a>
                     </li>
                 </ul>
             </div>
