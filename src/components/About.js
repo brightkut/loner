@@ -1,48 +1,21 @@
 import "../styles/About.scss"
 import {useSelector} from "react-redux";
+import {styleDarkMode} from "../styles/darkmode/DarkMode";
 
 function About() {
     const isNight = useSelector(state => state.night)
-
-    const styleMorning = {
-        backgroundColor: "#f8f9fa",
-    }
-    const styleNight = {
-        backgroundColor: "#262C30",
-    }
-
-    const fontMorning = {
-        color: "#535A5E"
-    }
-    const fontNight = {
-        color: "#D3D2D2"
-    }
-
-    const fontHeadMorning = {
-        color: "mediumblue"
-    }
-
-    const fontHeadNight = {
-        color: "#B09AF378"
-    }
-
-    const fontHeadMorning2 = {
-        color: "#535A5E"
-    }
-    const fontHeadNight2 = {
-        color: "#D3D2D2"
-    }
+    const theme = styleDarkMode(isNight)
 
     return (
-        <div className="container-fluid" id="main-about" style={isNight ? styleNight : styleMorning}>
+        <div className="container-fluid" id="main-about" style={theme.bgColor1}>
             <div className="container">
-                <h4 id="pronoun" style={isNight ? fontHeadNight2 : fontHeadMorning2}>Pronoun & Codename</h4>
+                <h4 id="pronoun" style={theme.fHeadColor2}>Pronoun & Codename</h4>
                 <h3 id="code-name"
-                    style={isNight ? fontHeadNight : fontHeadMorning}>He/Him &#129419; LonEr/Disorn &#129419; 孤独な</h3>
-                <hr id="line-sep" style={isNight ? fontHeadNight : fontHeadMorning}/>
+                    style={theme.fHeadColor1}>He/Him &#129419; LonEr/Disorn &#129419; 孤独な</h3>
+                <hr id="line-sep" style={theme.fHeadColor1}/>
                 <div className="row row-about">
                     <div className="container col-sm-12 col-md-6 col-lg-6" id="education">
-                        <p className="topic-about" style={isNight ? fontNight : fontMorning}>Education</p>
+                        <p className="topic-about" style={theme.fColor1}>Education</p>
                         <div className="container con-box">
                             <div className="text-box">
                                 <p className="org-name">Internship of summer student training program in NCU Taiwan</p>
@@ -74,7 +47,7 @@ function About() {
                         </div>
                     </div>
                     <div className="container col-sm-12 col-md-6 col-lg-6" id="experience">
-                        <p className="topic-about" style={isNight ? fontNight : fontMorning}>Experiences</p>
+                        <p className="topic-about" style={theme.fColor1}>Experiences</p>
                         <div className="container con-box">
                             <div className="text-box">
                                 <p className="org-name">Working for Accenture Company as Junior and Senior Backend
