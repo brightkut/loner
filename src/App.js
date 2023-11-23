@@ -15,7 +15,7 @@ function App() {
             <div className="container-fluid profile-main">
                 <Profile/>
             </div>
-            <div className="container-fluid about-main" id ="ab-page">
+            <div className="container-fluid about-main">
                 <About/>
             </div>
             <div className="container-fluid">
