@@ -1,33 +1,22 @@
 import '../styles/Portfolio.scss'
 import React from "react";
 import {useSelector} from "react-redux";
+import {styleDarkMode} from "../styles/darkmode/DarkMode";
 
 function Portfolio() {
     const isNight = useSelector(state => state.night)
+    const theme = styleDarkMode(isNight)
 
-    const styleMorning = {
-        backgroundColor: "#f8f9fa",
-    }
-    const styleNight = {
-        backgroundColor: "#262C30",
-    }
-
-    const fontHeadMorning = {
-        color: "#535A5E"
-    }
-    const fontHeadNight = {
-        color: "#D3D2D2"
-    }
     return (
-        <div className="container-fluid" id="main-port" style={isNight ? styleNight : styleMorning}>
+        <div className="container-fluid" id="main-port" style={theme.bgColor1}>
             <div className="container">
                 <div className="port-div">
-                    <span className="port-header" style={isNight ? fontHeadNight : fontHeadMorning}>Portfolio</span>
-                    <hr className="line-port" style={isNight ? fontHeadNight : fontHeadMorning}/>
+                    <span className="port-header" style={theme.fHeadColor2}>Portfolio</span>
+                    <hr className="line-port" style={theme.fHeadColor2}/>
                     <p style={{
                         fontSize: "20px",
                         fontFamily: "BlinkMacSystemFont",
-                        color: isNight ? "#D3D2D2" : "#535A5E"
+                        color: theme.fHeadColor2.color
                     }}>My Blog / Website</p>
 
                     <div className="row py-5">

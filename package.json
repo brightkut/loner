@@ -36,12 +36,6 @@
     "eject": "react-scripts eject",
     "build:deploy": "env-cmd -f .env.production.local npm run build && firebase deploy -P loner-f0066"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
   "browserslist": {
     "production": [
       ">0.2%",

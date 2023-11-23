@@ -3,22 +3,17 @@ import {loadSnowPreset} from "tsparticles-preset-snow";
 import Particles from "react-particles"
 import {useSelector} from "react-redux";
 import {useState} from "react";
+import {styleDarkMode} from "../styles/darkmode/DarkMode";
 
 function Profile() {
 
     const isNight = useSelector(state => state.night)
     const [hover] = useState(false);
+    const theme = styleDarkMode(isNight)
 
     // this customizes the component tsParticles installation
     const customInit = async (engine) => {
         await loadSnowPreset(engine);
-    }
-
-    const fontMorning = {
-        color: "black"
-    }
-    const fontNight = {
-        color: "white"
     }
 
     const getStyleBtn = (isNight, hover) => {
@@ -149,15 +144,9 @@ function Profile() {
         },
     };
 
-    const styleMorning = {
-        backgroundColor: "white",
-    }
-    const styleNight = {
-        backgroundColor: "#343a40",
-    }
 
     return (
-        <div className="container-fluid pb-5" style={isNight ? styleNight : styleMorning}>
+        <div className="container-fluid pb-5" style={theme.bgColor2}>
             <div className="container">
 
                 <div className="row">
@@ -166,13 +155,13 @@ function Profile() {
                              style={{objectFit: "cover"}}/>
                         <br/>
                         <br/>
-                        <h4 className="role" style={isNight ? fontNight : fontMorning}>Software Developer</h4>
+                        <h4 className="role" style={theme.fColor2}>Software Developer</h4>
                     </div>
                     <div className="box2 col-sm-12 col-md-12 col-lg-6 justify-content-center">
                         <div className="text">
                             <Particles options={options} init={customInit}/>
                             <div className="container-fluid" id="text-box-profile"
-                                 style={isNight ? fontNight : fontMorning}>
+                                 style={theme.fColor2}>
                                 <h4>Who am I ?</h4>
                                 <p>I'm a teeny Backend Developer who want to learn new thing with 25 years old. For my
                                     free time
