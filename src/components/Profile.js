@@ -4,6 +4,7 @@ import Particles from "react-particles"
 import {useSelector} from "react-redux";
 import {useState} from "react";
 import {styleDarkMode} from "../styles/darkmode/DarkMode";
+import {mockUserProfile} from "../api/UserService";
 
 function Profile() {
 
@@ -151,11 +152,11 @@ function Profile() {
 
                 <div className="row">
                     <div className="col-sm-12 col-md-12 col-lg-6 text-center">
-                        <img className="profile" src="https://i.ibb.co/H7cnW0Q/profile.jpg"
+                        <img className="profile" src={mockUserProfile.profileImageUrl}
                              style={{objectFit: "cover"}}/>
                         <br/>
                         <br/>
-                        <h4 className="role" style={theme.fColor2}>Software Developer</h4>
+                        <h4 className="role" style={theme.fColor2}>{mockUserProfile.position}</h4>
                     </div>
                     <div className="box2 col-sm-12 col-md-12 col-lg-6 justify-content-center">
                         <div className="text">
@@ -163,26 +164,18 @@ function Profile() {
                             <div className="container-fluid" id="text-box-profile"
                                  style={theme.fColor2}>
                                 <h4>Who am I ?</h4>
-                                <p>I'm a teeny Backend Developer who want to learn new thing with 25 years old. For my
-                                    free time
-                                    I
-                                    love more
-                                    to coding and play game and my favorite game is Dota2. You ask me if you want to
-                                    play haha.
-                                    I am
-                                    not believe in word
-                                    "Genius" but I believe with "Try hard".</p>
+                                <p>{mockUserProfile.profileDesc}</p>
                                 <div className="group-btn">
                                     <a style={getStyleBtn(isNight, hover)} className="btn a-btn"
-                                       href="https://github.com/brightkut"><i className="fa fa-github"></i></a>
+                                       href={mockUserProfile.githubUrl}><i className="fa fa-github"></i></a>
                                     <a style={getStyleBtn(isNight, hover)} className="btn a-btn"
-                                       href="https://www.linkedin.com/in/disorn-thitikornkovit-565526186/"><i
+                                       href={mockUserProfile.linkedInUrl}><i
                                         className="fa fa-linkedin-square"></i></a>
                                     <a style={getStyleBtn(isNight, hover)} className="btn a-btn"
-                                       href="https://steamcommunity.com/id/brightkuq/"><i
+                                       href={mockUserProfile.steamUrl}><i
                                         className="fa fa-steam"></i></a>
                                     <a style={getStyleBtn(isNight, hover)} className="btn a-btn"
-                                       href="https://www.instagram.com/brighteloy/"><i className="fa fa-instagram"></i></a>
+                                       href={mockUserProfile.instagramUrl}><i className="fa fa-instagram"></i></a>
                                 </div>
                             </div>
                         </div>
