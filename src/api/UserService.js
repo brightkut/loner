@@ -135,6 +135,44 @@ export const mockUserProfile = {
                 },
             ]
         }
+    ],
+    portfolio: [
+        {
+            title: "Website",
+            imageUrl: "https://i.ibb.co/m6zSCdK/website.png",
+            description: "This is my website to summarize what I'm learning about\n" +
+                "                                        programming.",
+            url: "https://dev7days.gitbook.io/dev7days/",
+            buttonName: "Visit Website"
+        },
+        {
+            title: "Blog",
+            imageUrl: "https://i.ibb.co/DtpdC5P/gamer.png",
+            description: "Gamer to Coder เด็กติดเกมสู่เด็กติดโค้ด",
+            url: "https://medium.com/@dsorn2/gamer-to-coder-%E0%B9%80%E0%B8%94%E0%B9%87%E0%B8%81%E0%B8%95%E0%B8%B4%E0%B8%94%E0%B9%80%E0%B8%81%E0%B8%A1%E0%B8%AA%E0%B8%B9%E0%B9%88%E0%B9%80%E0%B8%94%E0%B9%87%E0%B8%81%E0%B8%95%E0%B8%B4%E0%B8%94%E0%B9%82%E0%B8%84%E0%B9%89%E0%B8%94-7029744fdcc7",
+            buttonName: "Visit Blog"
+        },
+        {
+            title: "Blog",
+            imageUrl: "https://i.ibb.co/kxZf94x/docker.png",
+            description: "Docker #1 วาฬน้อยแสนหรรษา",
+            url: "https://medium.com/@dsorn2/docker-1-%E0%B8%A7%E0%B8%B2%E0%B8%AC%E0%B8%99%E0%B9%89%E0%B8%AD%E0%B8%A2%E0%B9%81%E0%B8%AA%E0%B8%99%E0%B8%AB%E0%B8%A3%E0%B8%A3%E0%B8%A9%E0%B8%B2-b149dc493812",
+            buttonName: "Visit Blog"
+        },
+        {
+            title: "Blog",
+            imageUrl: "https://i.ibb.co/9ntKg8y/docker2.png",
+            description: "มาใช้ Docker กันเถอะ #2",
+            url: "https://medium.com/@dsorn2/%E0%B8%A1%E0%B8%B2%E0%B9%83%E0%B8%8A%E0%B9%89-docker-%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B9%80%E0%B8%96%E0%B8%AD%E0%B8%B0-2-d41a02d1ad70",
+            buttonName: "Visit Blog"
+        },
+        {
+            title: "Blog",
+            imageUrl: "https://i.ibb.co/Dw95tph/ioc.png",
+            description: "Dependency Injection (DI) และ Inversion of Control (IOC)",
+            url: "https://medium.com/@dsorn2/dependency-injection-di-%E0%B9%81%E0%B8%A5%E0%B8%B0-inversion-of-control-ioc-6bb8341dd40b",
+            buttonName: "Visit Blog"
+        },
     ]
 }
 export function getUserProfile(){
