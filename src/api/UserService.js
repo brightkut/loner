@@ -173,7 +173,25 @@ export const mockUserProfile = {
             url: "https://medium.com/@dsorn2/dependency-injection-di-%E0%B9%81%E0%B8%A5%E0%B8%B0-inversion-of-control-ioc-6bb8341dd40b",
             buttonName: "Visit Blog"
         },
-    ]
+    ],
+    skills: {
+        languages: "Python, Javascript/TypeScript, Java, C#, Html,CSS, R, Kotlin, Nodejs",
+        libraries: "Express, Cheerio, Sequelize,\n" +
+            "                            Nest.js, Spring Boot, React, Redux,\n" +
+            "                            Jquery,\n" +
+            "                            Spring, Pandas, Vader Sentiment Analysis, TextBlob, Django, Robot Framework",
+        clouds: "AWS, Docker, Jenkins,\n" +
+            "                            Openshift, Kubernetes, AWS S3, Kinesis, SQS, SNS,\n" +
+            "                            Apache Kafka, Heroku, Terraform, AWS EC2, Elastic Bean Stalk",
+        databases: "Sqlite, MySQL, MongoDB,\n" +
+            "                            DynamoDB, PostgresDB, Redis, Elastic Search",
+        fundamentals: "DDD, Clean Architecture,\n" +
+            "                            CQRS, SOLID, CI/CD",
+        tools: "Github, Gitlab, Swagger,\n" +
+            "                            Vscode, Intelij, Webstorm, Datagrip, DBeaver,\n" +
+            "                            Robo3T, Anaconda, Notion, Postman, Insomnia, Iterm",
+        abilities: "Dota2, Writting Blog"
+    }
 }
 export function getUserProfile(){
 
