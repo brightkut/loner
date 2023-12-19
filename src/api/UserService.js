@@ -1,5 +1,5 @@
 export const mockUserProfile = {
-    profileImageUrl: "https://i.ibb.co/H7cnW0Q/profile.jpg",
+    profileImageUrl: "https://i.ibb.co/dG6mrj0/profile.jpg",
     position: "Software Developer",
     profileDesc: "I'm a teeny Backend Developer who want to learn new thing with 25 years old. For my\n" +
         "                                    free time\n" +
@@ -171,6 +171,13 @@ export const mockUserProfile = {
             imageUrl: "https://i.ibb.co/Dw95tph/ioc.png",
             description: "Dependency Injection (DI) และ Inversion of Control (IOC)",
             url: "https://medium.com/@dsorn2/dependency-injection-di-%E0%B9%81%E0%B8%A5%E0%B8%B0-inversion-of-control-ioc-6bb8341dd40b",
+            buttonName: "Visit Blog"
+        },
+        {
+            title: "Blog",
+            imageUrl: "https://i.ibb.co/xXcrPqM/cecbd9f5-e74b-4648-bc51-5d8db19996d0.jpg",
+            description: "ได้ยินบ่อยจังคือไรน้า” มารู้จัก Kubernetes กัน #1",
+            url: "https://medium.com/@dsorn2/%E0%B9%84%E0%B8%94%E0%B9%89%E0%B8%A2%E0%B8%B4%E0%B8%99%E0%B8%9A%E0%B9%88%E0%B8%AD%E0%B8%A2%E0%B8%88%E0%B8%B1%E0%B8%87%E0%B8%84%E0%B8%B7%E0%B8%AD%E0%B9%84%E0%B8%A3%E0%B8%99%E0%B9%89%E0%B8%B2-%E0%B8%A1%E0%B8%B2%E0%B8%A3%E0%B8%B9%E0%B9%89%E0%B8%88%E0%B8%B1%E0%B8%81-kubernetes-%E0%B8%81%E0%B8%B1%E0%B8%99-1-5618ef507bdd",
             buttonName: "Visit Blog"
         },
     ],
