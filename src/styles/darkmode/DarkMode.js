@@ -16,7 +16,7 @@ export const styleDarkMode = (isNight)=> {
                    color: "white"
                },
                 fHeadColor1:{
-                    color: "#B09AF378"
+                    color: "#03e3fc"
                 },
                 fHeadColor2:{
                     color: "#D3D2D2"

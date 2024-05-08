@@ -1,7 +1,13 @@
-export const mockUserProfile = {
-    profileImageUrl: "https://i.ibb.co/dG6mrj0/profile.jpg",
-    position: "Software Developer",
-    profileDesc: "I'm a teeny Backend Developer who want to learn new thing with 25 years old. For my\n" +
+export const getProfileDesc = (birthDateStr) =>{
+    const birthDate = new Date(birthDateStr);
+
+    // Get the current date
+    const currentDate = new Date();
+
+    // Calculate the difference between the current date and the birthdate
+    const age = currentDate.getFullYear() - birthDate.getFullYear();
+
+    return "I'm a teeny Backend Developer who want to learn new thing with " + age +" years old. For my\n" +
         "                                    free time\n" +
         "                                    I\n" +
         "                                    love more\n" +
@@ -9,7 +15,13 @@ export const mockUserProfile = {
         "                                    play haha.\n" +
         "                                    I am\n" +
         "                                    not believe in word\n" +
-        "                                    \"Genius\" but I believe with \"Try hard\".",
+        "                                    \"Genius\" but I believe with \"Try hard\"."
+}
+
+export const mockUserProfile = {
+    profileImageUrl: "https://i.ibb.co/H7cnW0Q/profile.jpg",
+    position: "Software Developer",
+    profileDesc: getProfileDesc("1997/03/29"),
     githubUrl: "https://github.com/brightkut",
     linkedInUrl: "https://www.linkedin.com/in/disorn-thitikornkovit-565526186/",
     steamUrl: "https://steamcommunity.com/id/brightkuq/",
@@ -199,7 +211,4 @@ export const mockUserProfile = {
             "                            Robo3T, Anaconda, Notion, Postman, Insomnia, Iterm",
         abilities: "Dota2, Writting Blog"
     }
-}
-export function getUserProfile(){
-
 }
