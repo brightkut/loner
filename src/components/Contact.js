@@ -1,11 +1,11 @@
-import "./Contact.scss"
+import "../styles/Contact.scss"
 import React, {useState} from "react";
 import {useSelector} from "react-redux";
 
 function Contact() {
-    const [name, setName] = useState("name")
-    const [email, setEmail] = useState("email")
-    const [message, setMessage] = useState("message")
+    const [name, setName] = useState("")
+    const [email, setEmail] = useState("")
+    const [message, setMessage] = useState("")
     const isNight = useSelector(state => state.night)
 
     function onChangeName(event) {
@@ -56,17 +56,17 @@ function Contact() {
                 <hr className="line-port" style={isNight ? fontHeadNight : fontHeadMorning}/>
                 <div className="container pt-5">
                     <div className="input-group mb-4" style={{width: "50%", margin: "auto"}}>
-                        < input type="text" className="form-control" placeholder="name" aria-label="name" value={name}
+                        < input type="text" className="form-control" placeholder="Name..." aria-label="name" value={name}
                                 aria-describedby="basic-addon1" onChange={onChangeName}/>
                     </div>
                     <div className="input-group mb-4" style={{width: "50%", margin: "auto"}}>
-                        < input type="text" className="form-control" placeholder="email" value={email}
+                        < input type="text" className="form-control" placeholder="Email..." value={email}
                                 aria-label="email"
                                 aria-describedby="basic-addon1" onChange={onChangeEmail}/>
                     </div>
 
                     <div className="input-group mb-4" style={{width: "50%", margin: "auto"}}>
-                        <textarea className="form-control" aria-label="message" placeholder="message" value={message}
+                        <textarea className="form-control" aria-label="message" placeholder="Message..." value={message}
                                   onChange={onChangeMessage}></textarea>
                     </div>
 

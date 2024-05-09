@@ -77,16 +77,22 @@
 }
 
 .tag {
-  padding: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 2px;
+  padding-right: 2px;
   background-color: #D3E3E9;
-  margin-top: 0;
   font-size: 12px;
   font-family: "Helvetica Neue";
   border-radius: 7%;
-  margin-right: 1rem;
+  text-align: center;
 }
 
 
-#span-tag-1 {
-  margin-bottom: 1rem;
+.span-tag {
+  display: grid;
+  //grid-template-rows: auto auto auto auto;
+  grid-template-columns: auto auto auto auto !important;
+  grid-gap: 10px!important;
+  padding: 10px !important;
 }
