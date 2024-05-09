@@ -7,6 +7,9 @@ function About() {
     const isNight = useSelector(state => state.night)
     const theme = styleDarkMode(isNight)
 
+    function getShadow(){
+        return isNight ? "5px 5px lightblue" : "5px 5px lightgray"
+    }
     return (
         <div className="container-fluid" id="main-about" style={theme.bgColor1}>
             <div className="container">
@@ -19,7 +22,7 @@ function About() {
                         <p className="topic-about" style={theme.fColor1}>Education</p>
                         {mockUserProfile.educations.map((education, index) => (
                             <div key={index} className="container con-box">
-                                <div className="text-box">
+                                <div className="text-box" style={{boxShadow: getShadow()}}>
                                     <p className="org-name">{education.topic}</p>
                                     <small className="year">{education.period}</small>
                                     <p className="org-desc">{education.details}</p>
@@ -42,7 +45,7 @@ function About() {
                     <div className="container col-sm-12 col-md-6 col-lg-6" id="experience">
                         <p className="topic-about" style={theme.fColor1}>Experiences</p>
                             {mockUserProfile.experiences.map((exp, index) =>{
-                                return <div key={index} className="container con-box"><div className="text-box">
+                                return <div key={index} className="container con-box"><div className="text-box" style={{boxShadow: getShadow()}}>
                                     <p className="org-name">{exp.topic}</p>
                                     <small className="year">{exp.period}</small>
                                     <ul>
@@ -52,14 +55,14 @@ function About() {
                                     </ul>
                                     {exp.learnings.map((learn, learnIndex) => (
                                         <div key={learnIndex} className="span-tag" id="span-tag-1">
-                                            {
-                                                Array.isArray(learn.key) ? (
-                                                    learn.key.map((l, lIndex) => (
-                                                        <span key={lIndex} className="tag">{l}</span>
-                                                    ))
-                                                ) : (
-                                                    <span className="tag">{learn.key}</span>
-                                                )}
+                                                {
+                                                    Array.isArray(learn.key) ? (
+                                                        learn.key.map((l, lIndex) => (
+                                                            <span key={lIndex} className="tag">{l}</span>
+                                                        ))
+                                                    ) : (
+                                                        <span className="tag">{learn.key}</span>
+                                                    )}
                                         </div>
                                     ))}
                                 </div>

@@ -30,9 +30,8 @@ export const mockUserProfile = {
         {
             topic: "Internship of summer student training program in NCU Taiwan",
             period: "1 June - 31 July 2018",
-            details: "Implemented web application about Kinect(v2) hosting on Heroku\n" +
-                "                                    by\n" +
-                "                                    using C# and Nodejs to develop frontend and backend with websocket.",
+            details: "Designed and developed a real-time chat application using Kinect v2 for gesture-based interaction,\n" +
+                "utilizing websockets for communication and deployed on Heroku for cloud hosting.",
             learnings: [
                 {
                     key: ["Websocket","NodeJS","C#","Heroku"]
@@ -53,60 +52,81 @@ export const mockUserProfile = {
     ],
     experiences: [
         {
-            topic: "Working for Accenture Company as Junior/Senior Backend Developer",
-            period: "August 2020 - Present",
+            topic: "Working for Opn Company as Backend Developer",
+            period: "April 2023 - Present",
             tasks: [
-                "To responsible for the project Corporate Portal about transaction management within a company",
-                "To responsible for the project Maemanee about a merchant management system integrated with shipping the third party",
-                "Maintained and implemented a new feature on SCB Easy with the part about a loan",
-                "POC and implemented graceful shutdown when getting the process from Kafka",
-                "POC and implemented rate limit by using Envoy filter on Kubernetes",
-                "Create test automation script with Robot framework for testing UI and API",
-                "Monitoring microservice utilization with Grafana",
-                "Supported load test and investigated issue via Jaeger",
-                "Investigated and resolved the issue on stage and production environment for all projects",
+                "Designed and implemented new features for the project involving Payment Gateway as a Service\n" +
+                "project.",
+                "Investigated and resolved the issue on UAT to support our bank customer.",
+                "Had the expertise and skills required to perform certification testing for Visa and Mastercard.",
+                "Implemented and maintained functionalities related to authorization, settlement/clearing, and funding processes.",
+                "Create a test automation script with Selenium and TestNG for API testing."
             ],
             learnings: [
                 {
-                    key: ["Spring Boot","Mysql","Postgres"]
+                    key: ["Ruby on Rails","Golang","Java","Splunk"]
                 },
                 {
-                    key: ["Kibana","AWS S3","Kubernetes"]
+                    key: ["Kubernetes","PostgresDB","Microservice","Selenium"]
                 },
                 {
-                    key: ["MongoDB","Redis","Microservice"]
+                    key: ["Datadog","Buildkite","Vaadin","Github"]
                 },
-                {
-                    key: ["Apache Kafka","Robot Framework"]
-                },
-                {
-                    key: ["Jaeger","Grafana","Gitlab","Jenkins"]
-                }
             ]
         },
         {
-            topic: "Working for OnedayCat Company as Junior Backend Developer",
-            period: "December 2019 - June 2020",
+            topic: "Working for Accenture Company as Senior Backend Developer",
+            period: "August 2020 - Present",
             tasks: [
-                "To responsible for the project about e-commerce connecting with others platform including Lazada and Shopee",
-                "Designed API by using DDD, CQRS, and Event driven concept",
-                "Design database schema on Dynamo DB",
-                "Developed the backend part with Node js, Nest js and Typescript with AWS service including Lambda, S3, API Gateway, SQS, SNS and Cognitio",
-                "Implemented CQRS with Elasticsearch database",
-                "Configured Terraform for CI/CD process",
+                "Developed and maintained a new loan-related functionality on SCB Easy application.",
+                "Developed and maintained new features for the Corporate Portal, specifically focusing on transaction\n" +
+                "management within the company.",
+                "Responsible for managing the Maemanee project, which involves integrating a merchant management\n" +
+                "system with third-party shipping services.",
+                "Created POC and implemented a graceful shutdown mechanism for the backend service, enabling it to handle pending processes consuming from Kafka.",
+                "Created POC and implemented rate limit by using Envoy filter on Kubernetes.",
+                "Create a test automation script with Robot framework for UI and API testing.",
+                "Supported load test and investigated issue via Jaeger.",
+                "Monitoring microservice utilization with Grafana.",
+                "Investigated and resolved the issue on stage and production environment for all projects.",
+                "Mentoring, advising, and reviewing code for junior developers in both business and technical aspects."
             ],
             learnings: [
                 {
-                    key: ["Nodejs","Nestjs","Typescript"]
+                    key: ["Spring Boot","Mysql","Postgres","Kibana"]
                 },
                 {
-                    key: ["DynamoDB","AWS S3","SQS"]
+                    key: ["AWS S3","Kubernetes","MongoDB","Redis"]
                 },
                 {
-                    key: ["SNS","Kinesis","Elasticsearch"]
+                    key: ["Jaeger","Grafana","Gitlab","Jenkins"]
                 },
                 {
-                    key: ["Clean Architecture","DDD","Terraform"]
+                    key: ["Microservice","Apache Kafka","Robot Framework"]
+                },
+            ]
+        },
+        {
+            topic: "Working for OnedayCat Company as Backend Developer",
+            period: "December 2019 - June 2020",
+            tasks: [
+                "To be responsible for the project about e-commerce connecting with others platforms including Lazada and Shopee.",
+                "Designed API by using Domain Driven Design (DDD).",
+                "Design database schema in DynamoDB.",
+                "Designed and implemented a system based on the Command Query Responsibility Segregation (CQRS)\n" +
+                "concept, utilizing an Elasticsearch database.",
+                "Configured Terraform for the CI/CD pipeline to facilitate the deployment of applications on AWS\n" +
+                "Lambda.",
+            ],
+            learnings: [
+                {
+                    key: ["Nodejs","Nestjs","Typescript","DynamoDB"]
+                },
+                {
+                    key: ["AWS S3","SQS","SNS","Kinesis"]
+                },
+                {
+                    key: ["Elasticsearch","Clean Architecture","DDD","Terraform"]
                 },
                 {
                     key: ["CQRS","Event Driven","Cognito"]
@@ -114,33 +134,28 @@ export const mockUserProfile = {
             ]
         },
         {
-            topic: "Working for Allianz Technology Company as Junior Backend Developer",
+            topic: "Working for Allianz Technology Company as Backend Developer",
             period: "July 2019 - November 2019",
             tasks: [
-                "Developed the project about chatbot marketplace using Oauth2 for authentication\n" +
-                "                                        and Node js . In part of automation into the stages of app deployment (CI/CD\n" +
-                "                                        process) used Jenkins and Docker on Openshift",
-                "Migrated Jenkins from on premise server to docker container",
+                "Developed a chatbot marketplace project incorporating Github OAuth2 for authentication and Node.js. Implemented automation for app deployment stages (CI/CD process) utilizing Jenkins and Docker on OpenShift.",
+                "Migrated Jenkins from on premise server to docker container.",
             ],
             learnings: [
                 {
-                    key: ["Nodejs","Mysql","AzureBot"]
+                    key: ["Nodejs","Mysql","AzureBot","Docker"]
                 },
                 {
-                    key: ["Docker","Jenkins","Openshift"]
+                    key: ["Jenkins","Openshift","Swagger","Linux"]
                 },
                 {
-                    key: ["Swagger","Linux","Gitlab"]
+                    key: ["Gitlab"]
                 },
             ]
         },
         {
             topic: "Accenture Hackathon",
             period: "30 -31 March 2019",
-            tasks: [
-                "First Runner Up with Accenture Hackathon in topic about how to\n" +
-                "                                    use technology to assist disable people who were unemployed",
-            ],
+            tasks: ["First runner-up on the issue of using technology to assist disabled people who were unemployed."],
             learnings: [
                 {
                     key: ["Html","CSS","Javascript"]
@@ -194,11 +209,11 @@ export const mockUserProfile = {
         },
     ],
     skills: {
-        languages: "Python, Javascript/TypeScript, Java, C#, Html,CSS, R, Kotlin, Nodejs",
+        languages: "Python, Javascript/TypeScript, Java, C#, Html,CSS, R, Kotlin, Nodejs, Ruby on Rails, Golang",
         libraries: "Express, Cheerio, Sequelize,\n" +
             "                            Nest.js, Spring Boot, React, Redux,\n" +
             "                            Jquery,\n" +
-            "                            Spring, Pandas, Vader Sentiment Analysis, TextBlob, Django, Robot Framework",
+            "                            Spring, Pandas, Vader Sentiment Analysis, TextBlob, Django, Robot Framework, Vaadin",
         clouds: "AWS, Docker, Jenkins,\n" +
             "                            Openshift, Kubernetes, AWS S3, Kinesis, SQS, SNS,\n" +
             "                            Apache Kafka, Heroku, Terraform, AWS EC2, Elastic Bean Stalk",
