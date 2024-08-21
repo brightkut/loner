@@ -76,7 +76,7 @@ export const mockUserProfile = {
         },
         {
             topic: "Working for Accenture Company as Senior Backend Developer",
-            period: "August 2020 - Present",
+            period: "Aug 2020 - April 2023",
             tasks: [
                 "Developed and maintained a new loan-related functionality on SCB Easy application.",
                 "Developed and maintained new features for the Corporate Portal, specifically focusing on transaction\n" +
